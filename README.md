@@ -4,7 +4,9 @@
 - There are some commented-out packages in the spack.yaml's; these are ones I wasn't sure whether to including based on looking at prod {build,run}.ver's.
 - xml-fortran = libxmlparse on WCOSS2.
 
-## Usage instructions
+## Setup instructions
+
+All commands are run from this repository's root directory. The Spack repository will be cloned underneath it.
 
 ### Clone this repo (run once)
 ```bash
@@ -18,7 +20,7 @@ git clone https://github.com/spack/spack
 pushd spack ; git checkout 062d8100b92504ac3248650aab73ef016e7620f6 ; popd
 ```
 
-### Initialize Spack (run every time)
+### Initialize Spack (run on every shell session)
 
 > [!IMPORTANT]
 > Remember to run the `export` commands every time you initialize Spack.
@@ -29,7 +31,7 @@ export SPACK_DISABLE_LOCAL_CONFIG=true
 export SPACK_USER_CACHE_PATH=${SPACK_ROOT:?}/cache
 ```
 
-## Install spack-helpers (run once)
+### Install spack-helpers (run once)
 
 Clone the `spack-helpers` repository to provide additional stack validation commands:
 ```bash
@@ -37,28 +39,27 @@ git clone https://github.com/NOAA-EMC/spack-helpers
 ```
 The repo is already pointed to in common-config/config.yaml.
 
-## Install the Spack bootstrap bundle (run once)
+### Install the Spack bootstrap bundle (run once)
 
 ```bash
 spack bootstrap now
 ```
 
-## Install an Environment
+## Install an environment
 
 > [!IMPORTANT]
 > The `nco-core` environment **must be installed first**, then `nco-sci*` environments, then add-on environments.
 > Also, the `external` paths in the `nco-sci*` `spack.yaml` files that point to the `nco-core` installation **must be updated** to reflect the new installation path. I promise this is the only tedious part.
 
-## Set up and concretize an environment
+### Set up and concretize an environment
 
-For example:
+To activate the nco-core environment:
 ```bash
-cd var/spack/environments/nco-core-gcc-11.5.0
-spack env activate .
+spack env activate nco-core-gcc-11.5.0
 spack concretize
 ```
 
-## Validate the concretization
+### Validate the concretization
 
 The `spack validate` commands below are provided by the `spack-helpers` extension.
 
@@ -89,14 +90,14 @@ There is currently no up-to-date list of NCO-approved packages. *If* an approved
 spack validate check-approved-pkgs --pkgs-from-file approved_packages.txt
 ```
 
-## Installation
+### Do the build
 
 Install the concretized environment:
 ```bash
 spack install --only-concrete --jobs 20
 ```
 
-## Generate module files
+### Generate module files
 
 > [!NOTE]
 > These steps are only required for add-on environments (but there's no harm in running them, either).
