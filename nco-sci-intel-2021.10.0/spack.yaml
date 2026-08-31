@@ -1,0 +1,157 @@
+# spack-stack hash: 7145e585
+# spack hash: 0a2c2f21d5
+spack:
+  concretizer:
+    unify: when_possible
+    reuse: false
+
+  config:
+    deprecated: true
+
+  view: false
+
+  include:
+  - ../common-config/packages_intel-2021.10.0.yaml
+  - ../common-config/config.yaml
+  - ../common-config/modules.yaml
+  - ../common-config/packages.yaml
+  - ../common-config/bootstrap.yaml
+  - ../common-config/repos.yaml
+
+  specs:
+  - bacio@2.4.1
+  - bufr
+  - cdo
+#  - cfitsio
+  - crtm@=3.1.2
+  - ecmwf-atlas +eigen +fckit ~fftw +openmp +shared ~tesselation ~trans ^eigen@3.4.0
+  - esmf@8.8.0
+  - fms@2025.03 precision=32,64 +quad_precision +openmp +yaml +gfs_phys constants=GFS
+  - fms@2024.03 precision=32,64 +quad_precision +openmp ~yaml +gfs_phys constants=GFS +deprecated_io
+  - g2
+  - g2c
+  - g2tmpl
+#  - gdal
+#  - geos
+  - gempak
+  - gfsio
+  - gftl-shared
+  - grib-util
+  - gsi-ncdiag
+  - gsl
+#  - gsl-lite
+  - hdf5 +hl +fortran +mpi +threadsafe ~szip
+  - ip
+  - jasper
+  - landsfcutil
+  - libgeotiff
+  - libjpeg-turbo
+  - libpng
+  - libtiff
+  - libxml2
+  - madis
+  - mapl@2.53.4 ^esmf@8.8.0
+  - met
+  - metis
+  - metplus
+#  - nccmp
+  - ncio
+  - nco
+#  - ncview
+  - nemsio
+  - netcdf-c ~dap +mpi ~parallel-netcdf ~szip build_system=cmake
+  - netcdf-fortran
+  - parallelio
+  - python
+#  - qhull
+  - scotch
+  - sfcio
+  - sigio
+  - sp
+  - udunits
+  - upp ^crtm@=2.4.0.1
+  - w3emc
+  - w3nco
+  - wgrib2
+  - wrf-io
+  - xml-fortran
+  repos:
+    nco_repo: $env/../spack_repo/nco_repo
+  packages:
+    cmake:
+      buildable: false
+      externals:
+      - spec: cmake@3.31.12 ~doc+ncurses+ownlibs~qtgui
+        prefix: /lfs/work/alexander_richert/stack/test-v1/spack/opt/nco-v1/cmake-3.31.12-5a3oihip6nq5crnlrmgogy65wmdkd7hf/
+    git:
+      buildable: false
+      externals:
+      - spec: git@2.55.0 +man+nls+perl+subtree~tcltk
+        prefix: /lfs/work/alexander_richert/stack/test-v1/spack/opt/nco-v1/git-2.55.0-56b6gisvpcg3uikqaf4x52izd3nb6kfw
+    git-lfs:
+      buildable: false
+      externals:
+      - spec: git-lfs@3.7.1
+        prefix: /lfs/work/alexander_richert/stack/test-v1/spack/opt/nco-v1/git-lfs-3.7.1-uzx6u7qb5mexj4nndumskjg2nkhlstmw
+    gmake:
+      buildable: false
+      externals:
+      - spec: gmake@4.4.1 ~guile
+        prefix: /lfs/work/alexander_richert/stack/test-v1/spack/opt/nco-v1/gmake-4.4.1-bf6g6o2xyhlkjnhzwa4yixmxudawtamq
+    libice:
+      buildable: false
+      externals:
+      - spec: libice@1.1.2
+        prefix: /lfs/work/alexander_richert/stack/test-v1/spack/opt/nco-v1/libice-1.1.2-ucqy3m5yd6tdk6i6gfmskj73ylxrl2fp
+    libsm:
+      buildable: false
+      externals:
+      - spec: libsm@1.2.6
+        prefix: /lfs/work/alexander_richert/stack/test-v1/spack/opt/nco-v1/libsm-1.2.6-udtg3arrdx5wpjcoov2ojvoz7e5jftil
+    libx11:
+      buildable: false
+      externals:
+      - spec: libx11@1.8.13
+        prefix: /lfs/work/alexander_richert/stack/test-v1/spack/opt/nco-v1/libx11-1.8.13-ftskz73axrr4vzw63s6syuktmqsmmvty
+    libxext:
+      buildable: false
+      externals:
+      - spec: libxext@1.3.7
+        prefix: /lfs/work/alexander_richert/stack/test-v1/spack/opt/nco-v1/libxext-1.3.7-3iwzrfwmd577ossmmubjq24azdhd6bq4
+    libxi:
+      buildable: false
+      externals:
+      - spec: libxi@1.7.10
+        prefix: /lfs/work/alexander_richert/stack/test-v1/spack/opt/nco-v1/libxi-1.7.10-yn3w7oq4mhwzpdr5yylwvih7uzptpkjt
+    libxt:
+      buildable: false
+      externals:
+      - spec: libxt@1.3.1
+        prefix: /lfs/work/alexander_richert/stack/test-v1/spack/opt/nco-v1/libxt-1.3.1-wwncholy5ofgvrq5balon4nqfojdlao5
+    libxtst:
+      buildable: false
+      externals:
+      - spec: libxtst@1.2.5
+        prefix: /lfs/work/alexander_richert/stack/test-v1/spack/opt/nco-v1/libxtst-1.2.5-c3fmrjfx7glwc4tc5yj7ikj4joioqj6a
+    motif:
+      buildable: false
+      externals:
+      - spec: motif@2.3.8
+        prefix: /lfs/work/alexander_richert/stack/test-v1/spack/opt/nco-v1/motif-2.3.8-5moojac46tzurvwqigmtssnmgvhftphs
+    perl:
+      buildable: false
+      externals:
+      - spec: perl@5.42.2 +cpanm+opcode+open+shared+threads
+        prefix: /lfs/work/alexander_richert/stack/test-v1/spack/opt/nco-v1/perl-5.42.2-ypyzzxaevt5sbpogh7mpl4zrz7b6u3g2
+    xproto:
+      buildable: false
+      externals:
+      - spec: xproto@7.0.31
+        prefix: /lfs/work/alexander_richert/stack/test-v1/spack/opt/nco-v1/xproto-7.0.31-eq36hkd3fwthquoh2e77wleygamul2y3
+    crtm-fix:
+      buildable: false
+      externals:
+      - spec: crtm-fix@2.4.0.1_emc +big_endian~little_endian+netcdf
+        prefix: /lfs/work/alexander_richert/stack/test-v1/spack/opt/nco-v1/crtm-fix-2.4.0.1_emc-ed2joat2qislfkpz32dqml4bc2f32pr5
+      - spec: crtm-fix@3.1.2.0 +big_endian~little_endian+netcdf~testfiles
+        prefix: /lfs/work/alexander_richert/stack/test-v1/spack/opt/nco-v1/crtm-fix-3.1.2.0-vxrmhib7iqlkowthlvxcfjzkg76kvwwv

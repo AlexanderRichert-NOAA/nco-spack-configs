@@ -1,0 +1,45 @@
+# spack-stack hash: 7145e585
+# spack hash: 0a2c2f21d5
+spack:
+  concretizer:
+    unify: when_possible
+    reuse: false
+
+  config:
+    deprecated: true
+
+  view: false
+
+  include:
+  - ../common-config/packages_gcc-11.5.0.yaml
+  - ../common-config/config.yaml
+  - ../common-config/modules.yaml
+  - ../common-config/packages.yaml
+  - ../common-config/bootstrap.yaml
+  - ../common-config/repos.yaml
+
+  specs:
+  - awscli
+  - cmake@3
+  - crtm-fix@=3.1.2.0 # must be consistent with crtm version in nco-sci
+  - crtm-fix@=2.4.0.1_emc # must be consistent with crtm version in nco-sci
+  - cuda@12.9.1
+  - ecflow ^boost@1.85
+  - git
+  - git-lfs
+  - gmake
+  - imagemagick
+  - perl
+  - python@3.12
+  - rsync
+  - subversion
+  # GEMPAK dependencies:
+  - motif
+  - libxt
+  - libsm
+  - libxtst
+  - libice
+  - libxi
+  - libxext
+  - libx11
+  - xproto

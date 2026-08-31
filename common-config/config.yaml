@@ -1,0 +1,13 @@
+config:
+  build_jobs: 8
+  build_stage: $tempdir/$user/spack-stage
+  template_dirs:
+  - $env/../common-config/templates
+  - $spack/share/spack/templates
+  installer: new
+  install_tree:
+    root: $spack/opt/nco-v1
+    projections:
+      all: "{name}-{version}-{hash}"
+  extensions:
+  - $spack/spack-helpers

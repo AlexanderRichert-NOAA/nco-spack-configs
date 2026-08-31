@@ -1,0 +1,37 @@
+modules:
+  modules_flat:
+    enable:: [lmod]
+    lmod:
+      hierarchy:: []
+      core_compilers:: [gcc,oneapi,intel,intel-oneapi-compilers]
+      all:
+        autoload: run
+    roots:
+      lmod: $env/modules/flat
+    arch_folder: false
+  with_mpi_hierarchy:
+    enable:: [lmod]
+    lmod:
+      hierarchy:: [mpi]
+      core_compilers:: [gcc,oneapi,intel,intel-oneapi-compilers]
+      all:
+        autoload: run
+    roots:
+      lmod: $env/modules/mpi_hierarchy
+    arch_folder: false
+## Making use of this will require customized recipes with dummy virtuals:
+#  extended_hierarchy:
+#    enable:: [lmod]
+#    lmod:
+#      hierarchy:
+#      - mpi
+#      - hdf5_virtual
+#      - netcdf_c_virtual
+#      - esmf_virtual
+#      - python_virtual
+#      core_compilers:: [gcc,oneapi,intel,intel-oneapi-compilers]
+#      all:
+#        autoload: run
+#    roots:
+#      lmod: $env/modules/ext_hierarchy
+#    arch_folder: false
