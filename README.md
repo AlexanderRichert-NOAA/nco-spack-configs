@@ -25,7 +25,7 @@ pushd spack ; git checkout 062d8100b92504ac3248650aab73ef016e7620f6 ; popd
 
 ```bash
 export SPACK_DISABLE_LOCAL_CONFIG=true
-. share/spack/setup-env.sh
+. spack/share/spack/setup-env.sh
 export SPACK_USER_CACHE_PATH=${SPACK_ROOT:?}/cache
 ```
 
