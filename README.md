@@ -1,8 +1,8 @@
 # Install test stack
 
 ## Notes
-- There are some commented-out packages in the spack.yaml's; these are
-- xml-fortran = 
+- There are some commented-out packages in the spack.yaml's; these are ones I wasn't sure whether to including based on looking at prod {build,run}.ver's.
+- xml-fortran = libxmlparse on WCOSS2.
 
 ## Download Spack (run once)
 ```bash
