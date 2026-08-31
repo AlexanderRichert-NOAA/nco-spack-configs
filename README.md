@@ -43,7 +43,7 @@ Clone the `spack-helpers` repository to provide additional stack validation comm
 ```bash
 git clone https://github.com/NOAA-EMC/spack-helpers
 ```
-The repo is already pointed to in common-config/config.yaml.
+The extension is already incorporated via common-config/config.yaml, so no further setup is needed (unless you want tab completions, in which case source `spack-helpers/source_me.sh`).
 
 ### Install the Spack bootstrap bundle (run once)
 
