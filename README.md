@@ -69,8 +69,7 @@ The `spack validate` commands below are provided by the `spack-helpers` extensio
 
 #### Check for duplicate packages
 
-As of commit `05442a239a6508f1ce8a4b8cfc39a2ddffb9deb1`, the expected duplicates are:
-
+As of commit `de4ab10baf0805b5dd07e490cd446e93498dee9b`, the expected duplicates are:
 * `fms`
 * `crtm`
 * `crtm-fix`
@@ -82,7 +81,7 @@ spack validate check-duplicates
 
 #### Check for packages built with GCC
 
-Take inventory of packages in the `nco-sci*` environments that were built with GCC. As of commit `05442a239a6508f1ce8a4b8cfc39a2ddffb9deb1`, the only expected GCC-built package for the oneAPI environments is `bison`.
+Take inventory of packages in the `nco-sci*` environments that were built with GCC. As of commit `de4ab10baf0805b5dd07e490cd446e93498dee9b`, the only expected GCC-built package for the oneAPI environments is `bison`.
 ```bash
 spack validate allow-pkgs-for-compiler gcc bison
 ```
