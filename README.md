@@ -55,7 +55,7 @@ spack bootstrap now
 > [!IMPORTANT]
 > The `nco-core` environment **must be installed first**, then `nco-sci*` environments, then add-on environments.
 > [!IMPORTANT]
-> Also, the `external` paths in the `nco-sci*/spack.yaml` files that point to the `nco-core` installation **must be updated** to reflect the new installation path. I promise this is the only tedious part.
+> The `external` paths in the `nco-sci*/spack.yaml` files that point to the `nco-core` installation **must be updated** to reflect the new installation path. I promise this is the only tedious part.
 
 All commands are run from this repository's root directory. Currently the installed packages land under spack/opt/ and the modules go under each environment directory, but this can be easily customized.
 
@@ -89,6 +89,8 @@ Take inventory of packages in the `nco-sci*` environments that were built with G
 ```bash
 spack validate allow-pkgs-for-compiler gcc bison
 ```
+
+Don't bother running this command in the nco-core-**gcc**-11.5.0 environment...
 
 #### Check approved packages
 
