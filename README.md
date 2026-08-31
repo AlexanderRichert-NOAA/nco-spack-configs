@@ -75,15 +75,11 @@ The `spack validate` commands below are provided by the `spack-helpers` extensio
 
 #### Check for duplicate packages
 
-As of commit `de4ab10baf0805b5dd07e490cd446e93498dee9b`, the expected duplicates are:
-* `fms`
-* `crtm`
-* `crtm-fix`
-* `py-cython`
-
+The following command reflects expected duplicates for the nco-sci environments as of commit `de4ab10baf0805b5dd07e490cd446e93498dee9b`:
 ```bash
-spack validate check-duplicates
+spack validate check-duplicates -i fms -i crtm -i crtm-fix -i py-cython
 ```
+Duplicates aren't necessarily bad but should always be investigated.
 
 #### Check for packages built with GCC
 
