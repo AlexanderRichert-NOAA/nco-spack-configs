@@ -1,7 +1,9 @@
-# Install NIMBUS test stack
+# NIMBUS test stack
 
-## Notes
-- There are some commented-out packages in the spack.yaml's; these are ones I wasn't sure whether to including based on looking at prod {build,run}.ver's.
+This repo provides a set of Spack configuration files for installing test stacks for NIMBUS early access. See the instructions below.
+
+## Misc. notes
+- There are some commented-out packages in the spack.yaml's; these are ones that were in spack-stack 'nco' template but that I didn't see in any prod {build,run}.ver's.
 - xml-fortran = libxmlparse on WCOSS2.
 
 ## Setup instructions
