@@ -1,16 +1,24 @@
-# Install test stack
+# Install NIMBUS test stack
 
 ## Notes
 - There are some commented-out packages in the spack.yaml's; these are ones I wasn't sure whether to including based on looking at prod {build,run}.ver's.
 - xml-fortran = libxmlparse on WCOSS2.
 
-## Download Spack (run once)
+## Usage instructions
+
+### Clone this repo
+```bash
+git clone https://github.com/AlexanderRichert-NOAA/nco-spack-configs
+cd nco-spack-configs
+```
+
+### Download Spack (run once)
 ```bash
 git clone https://github.com/spack/spack
 pushd spack ; git checkout 062d8100b92504ac3248650aab73ef016e7620f6 ; popd
 ```
 
-## Initialize Spack (run every time)
+### Initialize Spack (run every time)
 
 > [!IMPORTANT]
 > Remember to run the `export` commands every time you initialize Spack.
