@@ -3,6 +3,7 @@
 This repo provides a set of Spack configuration files for installing test stacks for NIMBUS early access. See the instructions below.
 
 ## Misc. notes
+- The 'nco-core' environment contains a bunch of packages that ostensibly don't need to be distinguished by compiler (e.g., we don't need a separate copy of cmake for every compiler). Some of these packages are used by the nco-sci environments, which provide the main stack of scientific software dependencies.
 - There are some commented-out packages in the spack.yaml's; these are ones that were in the spack-stack 'nco' template but that I didn't see in any prod {build,run}.ver's.
 - xml-fortran = libxmlparse on WCOSS2.
 
