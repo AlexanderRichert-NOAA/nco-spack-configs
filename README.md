@@ -1,9 +1,9 @@
-# NIMBUS test stack
+# NIMBUS early access test stack
 
 This repo provides a set of Spack configuration files for installing test stacks for NIMBUS early access. See the instructions below.
 
 ## Misc. notes
-- There are some commented-out packages in the spack.yaml's; these are ones that were in spack-stack 'nco' template but that I didn't see in any prod {build,run}.ver's.
+- There are some commented-out packages in the spack.yaml's; these are ones that were in the spack-stack 'nco' template but that I didn't see in any prod {build,run}.ver's.
 - xml-fortran = libxmlparse on WCOSS2.
 
 ## Setup instructions
@@ -52,6 +52,8 @@ spack bootstrap now
 > [!IMPORTANT]
 > The `nco-core` environment **must be installed first**, then `nco-sci*` environments, then add-on environments.
 > Also, the `external` paths in the `nco-sci*` `spack.yaml` files that point to the `nco-core` installation **must be updated** to reflect the new installation path. I promise this is the only tedious part.
+
+All commands are run from this repository's root directory.
 
 ### Set up and concretize an environment
 
