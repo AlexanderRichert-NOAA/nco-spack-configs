@@ -6,13 +6,13 @@
 
 ## Usage instructions
 
-### Clone this repo
+### Clone this repo (run once)
 ```bash
 git clone https://github.com/AlexanderRichert-NOAA/nco-spack-configs
 cd nco-spack-configs
 ```
 
-### Download Spack (run once)
+### Clone Spack (run once)
 ```bash
 git clone https://github.com/spack/spack
 pushd spack ; git checkout 062d8100b92504ac3248650aab73ef016e7620f6 ; popd

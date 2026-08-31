@@ -10,4 +10,4 @@ config:
     projections:
       all: "{name}-{version}-{hash}"
   extensions:
-  - $spack/spack-helpers
+  - $spack/../spack-helpers
