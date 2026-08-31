@@ -21,6 +21,7 @@ cd nco-spack-configs
 git clone https://github.com/spack/spack
 pushd spack ; git checkout 062d8100b92504ac3248650aab73ef016e7620f6 ; popd
 ```
+There's nothing magical about this commit, it's just a recent commit on spack develop branch that I've tested with.
 
 ### Initialize Spack (run on every shell session)
 
@@ -32,6 +33,8 @@ export SPACK_DISABLE_LOCAL_CONFIG=true
 . spack/share/spack/setup-env.sh
 export SPACK_USER_CACHE_PATH=${SPACK_ROOT:?}/cache
 ```
+> [!TIP]
+> I suggest running `touch ~/.spack` to avoid accidentally populating that directory and inadvertently polluting later Spack configurations/builds.
 
 ### Install spack-helpers (run once)
 
@@ -51,9 +54,10 @@ spack bootstrap now
 
 > [!IMPORTANT]
 > The `nco-core` environment **must be installed first**, then `nco-sci*` environments, then add-on environments.
-> Also, the `external` paths in the `nco-sci*` `spack.yaml` files that point to the `nco-core` installation **must be updated** to reflect the new installation path. I promise this is the only tedious part.
+> [!IMPORTANT]
+> Also, the `external` paths in the `nco-sci*/spack.yaml` files that point to the `nco-core` installation **must be updated** to reflect the new installation path. I promise this is the only tedious part.
 
-All commands are run from this repository's root directory.
+All commands are run from this repository's root directory. Currently the installed packages land under spack/opt/ and the modules go under each environment directory, but this can be easily customized.
 
 ### Set up and concretize an environment
 
