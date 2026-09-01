@@ -296,6 +296,7 @@ which
 wrf-io
 xcb-proto
 xextproto
+xml-fortran
 xproto
 xrandr
 xtrans
