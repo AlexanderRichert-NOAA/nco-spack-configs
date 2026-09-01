@@ -95,6 +95,7 @@ hwloc
 icu4c
 imagemagick
 inputproto
+intel-oneapi-runtime
 ip
 jasper
 json-c
