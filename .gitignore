@@ -1,0 +1,4 @@
+.spack-env/
+__pycache__/
+/spack-helpers/
+/spack/
