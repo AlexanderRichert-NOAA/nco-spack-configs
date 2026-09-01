@@ -24,6 +24,7 @@ cairo
 cdo
 cfitsio
 cmake
+compiler-wrappers
 crtm
 curl
 dbus
@@ -255,6 +256,7 @@ py-xarray
 py-xhistogram
 py-xmltodict
 python
+python-venv
 qhull
 qt
 randrproto
