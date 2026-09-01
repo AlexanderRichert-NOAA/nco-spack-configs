@@ -24,7 +24,7 @@ cairo
 cdo
 cfitsio
 cmake
-compiler-wrappers
+compiler-wrapper
 crtm
 curl
 dbus
