@@ -92,9 +92,9 @@ Don't bother running this command in the nco-core-**gcc**-11.5.0 environment...
 
 #### Check approved packages
 
-There is currently no up-to-date list of NCO-approved packages. *If* an approved package list becomes available, run:
+Check root specs against NCO approved packages list (which is imperfectly based on the WCCIS Approved Software List's WCOSS2 Approved Software sheet):
 ```bash
-spack validate check-approved-pkgs --pkgs-from-file approved_packages.txt
+spack validate check-approved-pkgs --only-roots --pkgs-from-file common-config/approved_packages.txt
 ```
 
 ### Do the build
