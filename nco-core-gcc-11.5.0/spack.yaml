@@ -19,7 +19,7 @@ spack:
   - ../common-config/repos.yaml
 
   specs:
-  - awscli
+  - awscli-v2
   - cmake@3
   - crtm-fix@=3.1.2.0 # must be consistent with crtm version in nco-sci
   - crtm-fix@=2.4.0.1_emc # must be consistent with crtm version in nco-sci
