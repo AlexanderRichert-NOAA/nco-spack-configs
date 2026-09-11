@@ -23,6 +23,7 @@ class Gempak(MakefilePackage):
 
     version("7.18.0", tag="7.18.0")
     version("7.15.1", tag="7.15.1")
+    version("7.14.0.1", tag="7.14.0.1")
 
     depends_on("c", type="build")
     depends_on("cxx", type="build")

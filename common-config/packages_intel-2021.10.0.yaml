@@ -56,17 +56,17 @@ packages:
   ### Individual package settings
   #
   cdo:
-    require: ["@=2.0.5"]
+    require: ["@:2.0.5"]
   eckit:
-    require:: ["@=1.28.8"]
+    require:: ["@:1.28.8"]
   ecmwf-atlas:
-    require:: ['@=0.38.1']
+    require:: ['@:0.38.1']
   fckit:
-    require:: ['@=0.13.1', '+eckit']
+    require:: ['@:0.13.1', '+eckit']
   findutils:
-    require: ['@=4.1']
+    require: ['@:4.1']
   gdal:
-    require: ['@3.8.5']
+    require: ['@:3.8.5']
 #  gettext:
 #    require: ["%[virtuals=c,cxx] gcc"]
 #  glib:
@@ -76,8 +76,8 @@ packages:
 #  harfbuzz:
 #    require: "%[virtuals=c,cxx] gcc"
   libiconv:
-    require: ["@=1.14"]
+    require: ["@:1.14"]
   py-xarray:
-    require: ["@=2023.7.0"]
+    require: ["@:2023.7.0"]
   tar:
     require: "%[virtuals=c] gcc"

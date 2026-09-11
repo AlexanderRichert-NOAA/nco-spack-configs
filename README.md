@@ -54,7 +54,7 @@ spack bootstrap now
 ## Install an environment
 
 > [!IMPORTANT]
-> The `nco-core` environment **must be installed first**, then `nco-sci*` environments, then add-on environments.
+> The `nco-core` environment **must be installed first**, then `nco-sci` and `gfs-v16` environments, then add-on environments.
 
 > [!IMPORTANT]
 > The `external` paths in the `nco-sci*/spack.yaml` files that point to the `nco-core` installation **must be updated** to reflect the new installation path. I promise this is the only tedious part.
