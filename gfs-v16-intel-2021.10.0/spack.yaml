@@ -1,0 +1,59 @@
+# spack-stack hash: 7145e585
+# spack hash: 0a2c2f21d5
+spack:
+  concretizer:
+    unify: true
+    reuse: false
+
+  config:
+    deprecated: true
+
+  view: false
+
+  include:
+  - ../common-config/packages_intel-2021.10.0.yaml
+  - ../common-config/config.yaml
+  - ../common-config/modules.yaml
+  - ../common-config/packages.yaml
+  - ../common-config/bootstrap.yaml
+  - ../common-config/repos.yaml
+
+  specs:
+  - bacio@2.4.1
+  - bufr@11.7.0
+  - cdo@1.9.8
+  - cmake@3.20.2
+  - crtm@2.4.0.2
+  - esmf@8.0.1
+  - g2@3.4.5
+  - g2tmpl@1.9.1
+  - gempak@7.14.1
+  - gfsio@1.4.1
+  - grib-util@1.2.3
+  - gsl@2.7
+  - hdf5@1.10.6 +hl +fortran +mpi +threadsafe ~szip
+  - imagemagick@7.0.8-7
+  - ip@3.3.3
+  - jasper@2.0.25
+  - libjpeg@9c
+  - libpng@1.6.37
+  - ncdiag@1.1.1
+  - ncio@1.0.0
+  - nco@4.7.9
+  - nemsio@2.5.2
+  - netcdf-c@4.7.4 ~dap +mpi ~parallel-netcdf ~szip build_system=cmake
+  - netcdf-fortran@4.5.4
+  - perl@5.32.0
+  - python@3.8.6
+  - sfcio@1.4.1
+  - sigio@2.3.2
+  - sp@2.3.3
+  - udunits@2.2.28
+  - upp@8.3.0
+  - w3emc@2.9.2
+  - w3nco@2.4.1
+  - wgrib2@2.0.7
+  - wrf-io@1.1.1
+  - zlib@1.2.11
+  repos:
+    nco_repo: $env/../spack_repo/nco_repo
